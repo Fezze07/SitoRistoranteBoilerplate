@@ -3,7 +3,7 @@
 .footer {
   background: var(--color-primary);
   color: rgba(255, 255, 255, 0.85);
-  padding: var(--space-2xl) 0 0;
+  padding: var(--space-xl) 0 0; /* Ridotto da 2xl */
 }
 
 .footer__inner {
@@ -32,10 +32,10 @@
 /* Brand */
 .footer__name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Ridotto da 1.5 */
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 0.375rem;
+  margin-bottom: 0.25rem;
   line-height: 1.2;
 }
 
@@ -76,12 +76,12 @@
 /* Nav links */
 .footer__nav-title {
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
+  font-size: 0.65rem; /* Ridotto */
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .footer__nav-list {

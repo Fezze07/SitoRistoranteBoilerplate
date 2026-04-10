@@ -1,4 +1,4 @@
-// Hero.jsx — Sezione principale con immagine di sfondo e CTA
+import { useEffect, useRef } from 'react'
 import './Hero.css'
 
 import { WHATSAPP_URL, PHONE_LINK } from '../constants'
@@ -7,9 +7,40 @@ import heroData from '../data/hero.json'
 import globalData from '../data/global.json'
 
 export default function Hero() {
+  const parallaxRef = useRef(null)
+
+  useEffect(() => {
+    let ticking = false
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (parallaxRef.current) {
+            const scrolled = window.scrollY
+            // Applica il Parallax solo finché siamo ragionevolmente in cima
+            if (scrolled < window.innerHeight) {
+              parallaxRef.current.style.transform = `translateY(${scrolled * 0.4}px)`
+            }
+          }
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    // Inizia con un trigger per settare la posizione iniziale se ricarichi la pagina a metà scroll
+    handleScroll()
+    
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   return (
     <section id="top" className="hero" aria-label={heroData.aria.section}>
-      <div className="hero__bg" role="img" aria-label={heroData.aria.bgImage} />
+      {/* Wrapper per l'effetto Parallax allo scroll */}
+      <div className="hero__parallax" ref={parallaxRef}>
+        {/* L'immagine in sé con l'animazione Ken Burns */}
+        <div className="hero__bg" role="img" aria-label={heroData.aria.bgImage} />
+      </div>
 
       {/* Gradiente per garantire la leggibilità del testo sull'immagine */}
       <div className="hero__overlay" />

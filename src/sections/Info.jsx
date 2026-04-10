@@ -70,24 +70,6 @@ export default function Info() {
               </div>
             </div>
 
-            <div className="info__block">
-              <h3 className="info__block-title" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                <PhoneIcon size={20} />
-                {infoData.blocks.contacts.title}
-              </h3>
-              <div className="info__contacts">
-                <a href={PHONE_LINK} className="info__contact-btn info__contact-btn--call" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
-                  <PhoneIcon size={18} />
-                  {globalData.labels.callBtnFull}
-                </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                  className="info__contact-btn info__contact-btn--whatsapp" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
-                  <MessageIcon size={18} />
-                  {globalData.labels.whatsappBtnFull}
-                </a>
-              </div>
-            </div>
-
           </div>
 
           {/* Mappa Google embed — non richiede API key */}

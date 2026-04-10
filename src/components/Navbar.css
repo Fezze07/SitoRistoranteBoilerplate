@@ -115,6 +115,18 @@
   }
 }
 
+@media (max-width: 767px) {
+  .navbar__cta {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.65rem;
+    min-height: auto;
+  }
+  .navbar__cta svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 /* Menu hamburger (mobile) */
 .navbar__hamburger {
   display: flex;
