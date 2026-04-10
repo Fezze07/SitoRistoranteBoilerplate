@@ -66,11 +66,12 @@ export default function Menu() {
     setCurrentIdx(prev => prev + (direction === 'next' ? 1 : -1))
   }, [])
 
-  // Auto-avanzamento ogni 10 s
+  // Auto-avanzamento ogni 10 s. 
+  // Dipende da currentIdx: ogni navigazione (manuale o auto) resetta il timer.
   useEffect(() => {
     timerRef.current = setInterval(() => navigate('next'), 10000)
     return () => clearInterval(timerRef.current)
-  }, [navigate])
+  }, [currentIdx, navigate])
 
   // Normalizza l'indice per trattare cloni e slide reali come equivalenti
   const isSlideActive = (idx) => {
@@ -105,9 +106,11 @@ export default function Menu() {
           </button>
 
           {/* overflow: hidden nasconde i cloni laterali senza usare scroll nativo */}
-          <div 
             className="menu-carousel"
-            onTouchStart={e => touchStartX.current = e.touches[0].clientX}
+            onTouchStart={e => {
+              clearInterval(timerRef.current) // Ferma il timer appena l'utente tocca
+              touchStartX.current = e.touches[0].clientX
+            }}
             onTouchEnd={e => {
               const touchEndX = e.changedTouches[0].clientX
               if (touchStartX.current - touchEndX > 40) navigate('next')
