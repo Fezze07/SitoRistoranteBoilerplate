@@ -14,6 +14,7 @@ export default function Menu() {
   const timerRef = useRef(null)
   // Impedisce nuovi click mentre un'animazione CSS è in corso
   const lockRef = useRef(false)
+  const touchStartX = useRef(0)
 
   // Array esteso: [clone-ultimo, ...categorie reali, clone-primo]
   // Permette il loop infinito senza salti visibili
@@ -104,7 +105,15 @@ export default function Menu() {
           </button>
 
           {/* overflow: hidden nasconde i cloni laterali senza usare scroll nativo */}
-          <div className="menu-carousel">
+          <div 
+            className="menu-carousel"
+            onTouchStart={e => touchStartX.current = e.touches[0].clientX}
+            onTouchEnd={e => {
+              const touchEndX = e.changedTouches[0].clientX
+              if (touchStartX.current - touchEndX > 40) navigate('next')
+              else if (touchEndX - touchStartX.current > 40) navigate('prev')
+            }}
+          >
             <div
               ref={trackRef}
               className="menu-carousel__track"

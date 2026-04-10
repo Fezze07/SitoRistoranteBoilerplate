@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center; /* Centrato invece che flex-end per evitare l'effetto "allungato" */
   padding-top: var(--navbar-height);
@@ -49,7 +49,7 @@
   max-width: 800px;
   width: 100%;
   animation: fadeUp 0.9s ease 0.2s both;
-  padding-left: 0; 
+  /* padding-left rimosso per sfruttare quello del .container */
 }
 
 @media (min-width: 1024px) {

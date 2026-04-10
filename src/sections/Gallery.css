@@ -22,9 +22,15 @@
 /* Griglia asimmetrica */
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr; /* Singola colonna su mobile molto piccolo per non avere foto microscopiche */
   grid-template-rows: auto;
   gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 640px) {

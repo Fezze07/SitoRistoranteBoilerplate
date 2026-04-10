@@ -134,3 +134,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Modifiche per ottimizzare la lettura su mobile */
+@media (max-width: 768px) {
+  .menu-carousel__category-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+  }
+  .menu-section__title {
+    font-size: 2rem;
+  }
+  .menu-section {
+    padding: var(--space-lg) 0;
+  }
+}
