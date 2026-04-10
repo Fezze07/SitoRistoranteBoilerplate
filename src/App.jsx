@@ -6,6 +6,7 @@ import Menu from './sections/Menu'
 import Gallery from './sections/Gallery'
 import Info from './sections/Info'
 import Footer from './sections/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
       {/* FloatingCTA è fuori da <main> perché è posizionato fixed e non fa parte del flusso della pagina */}
       <FloatingCTA />
+      
+      <Analytics />
     </>
   )
 }
