@@ -106,6 +106,7 @@ export default function Menu() {
           </button>
 
           {/* overflow: hidden nasconde i cloni laterali senza usare scroll nativo */}
+          <div 
             className="menu-carousel"
             onTouchStart={e => {
               clearInterval(timerRef.current) // Ferma il timer appena l'utente tocca
