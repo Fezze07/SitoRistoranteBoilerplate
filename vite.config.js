@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     sourcemap: false,
     // Minifica e offusca il codice
-    minify: 'esbuild',
+    minify: 'oxc',
     rollupOptions: {
       output: {
         // Nomi hash per evitare cache poisoning e fingerprinting prevedibile
