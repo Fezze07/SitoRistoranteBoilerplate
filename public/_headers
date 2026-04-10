@@ -1,0 +1,35 @@
+/*
+  # =====================================================
+  # Security Headers — Hostaria ai Porteghi
+  # Validi per Netlify, Cloudflare Pages, e hosting statico
+  # =====================================================
+
+  # Blocca clickjacking (sito non incapsulabile in iframe)
+  X-Frame-Options: DENY
+
+  # Previene MIME-type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Forza HTTPS per 1 anno (365 giorni) + subdomains
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Info referrer limitate ai link esterni
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Disabilita funzionalità browser non necessarie
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; object-src 'none'; base-uri 'self'
+
+  # Cache control per risorse statiche
+  Cache-Control: no-store
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable

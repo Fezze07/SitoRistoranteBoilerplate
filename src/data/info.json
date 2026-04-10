@@ -1,0 +1,42 @@
+{
+  "sectionLabel": "Come trovarci",
+  "title": "Orari e Posizione",
+  "labels": {
+    "closed": "Chiuso"
+  },
+  "blocks": {
+    "hours": {
+      "title": "Orari di apertura"
+    },
+    "location": {
+      "title": "Dove siamo",
+      "mapLinkText": "Visualizza su Google Maps →",
+      "mapAriaLabel": "Apri in Google Maps"
+    },
+    "contacts": {
+      "title": "Contatti"
+    }
+  },
+  "hours": [
+    {
+      "days": "Martedì — Venerdì",
+      "lunch": "12:00 – 14:30",
+      "dinner": "18:00 – 22:30"
+    },
+    {
+      "days": "Sabato",
+      "lunch": "12:00 – 14:30",
+      "dinner": "18:00 – 22:30"
+    },
+    {
+      "days": "Domenica",
+      "lunch": "12:00 – 15:00",
+      "dinner": "Chiuso"
+    },
+    {
+      "days": "Lunedì",
+      "lunch": "Chiuso",
+      "dinner": "Chiuso"
+    }
+  ]
+}

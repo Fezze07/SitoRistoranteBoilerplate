@@ -1,0 +1,27 @@
+{
+  "brand": {
+    "name": "Hostaria ai Porteghi",
+    "tagline": "Cucina veneta autentica",
+    "subLocality": "Portobuffolè · dal cuore del Veneto"
+  },
+  "navLinks": [
+    { "label": "Chi Siamo",  "href": "#chi-siamo" },
+    { "label": "Menù",       "href": "#menu" },
+    { "label": "Galleria",   "href": "#galleria" },
+    { "label": "Dove Siamo", "href": "#info" }
+  ],
+  "labels": {
+    "whatsappBtn": "Prenota",
+    "whatsappBtnFull": "Prenota su WhatsApp",
+    "callBtn": "Chiama",
+    "callBtnFull": "Chiama ora"
+  },
+  "aria": {
+    "mainNav": "Navigazione principale",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "floatingCta": "Azioni rapide",
+    "social": "Seguici sui social",
+    "quickLinks": "Link rapidi"
+  }
+}

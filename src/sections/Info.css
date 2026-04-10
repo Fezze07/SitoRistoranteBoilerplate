@@ -1,0 +1,197 @@
+/* Info.css — Sezione orari e mappa */
+
+.info {
+  background: var(--color-surface);
+  padding: var(--space-2xl) 0;
+}
+
+.info__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.info__header .section-divider {
+  margin: var(--space-sm) auto var(--space-md);
+}
+
+.info__title {
+  font-size: var(--text-title);
+  color: var(--color-primary);
+}
+
+/* Layout: dettagli | mappa */
+.info__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .info__grid {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* Blocchi info */
+.info__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.info__block {
+  background: var(--color-surface-bright);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-ambient);
+}
+
+.info__block-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info__block-icon {
+  font-size: 1rem;
+}
+
+/* Tabella orari */
+.info__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.info__hour-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(218, 193, 191, 0.2);
+}
+
+.info__hour-row:last-child {
+  border-bottom: none;
+}
+
+.info__hour-day {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-on-surface);
+  min-width: 160px;
+}
+
+.info__hour-times {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.info__hour-sep {
+  color: var(--color-outline-variant);
+}
+
+.info__hour-row--closed .info__hour-day {
+  color: var(--color-on-surface-variant);
+  opacity: 0.6;
+}
+
+.info__hour-closed {
+  font-style: italic;
+  color: var(--color-outline-variant);
+}
+
+/* Indirizzo */
+.info__address {
+  font-style: normal;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-on-surface-variant);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+.info__map-link {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary-container);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.info__map-link:hover {
+  color: var(--color-primary);
+}
+
+/* Bottoni contatto */
+.info__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info__contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.info__contact-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.info__contact-btn--call {
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  border: 1.5px solid rgba(218, 193, 191, 0.4);
+}
+
+.info__contact-btn--whatsapp {
+  background: linear-gradient(to bottom, var(--color-primary-container), var(--color-primary));
+  color: #ffffff;
+}
+
+/* Mappa Google */
+.info__map-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-float);
+  height: 100%;
+  min-height: 400px;
+}
+
+.info__map {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: none;
+  display: block;
+}

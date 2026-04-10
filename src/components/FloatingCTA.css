@@ -1,0 +1,65 @@
+/* FloatingCTA.css — Barra flottante prenotazione (solo mobile) */
+
+.floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  /* Glassmorphism: stesso stile della navbar */
+  background: rgba(253, 249, 243, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(218, 193, 191, 0.3);
+  padding: 0.875rem var(--page-padding);
+  display: flex;
+  gap: 0.75rem;
+  /* Visibile solo su mobile */
+}
+
+@media (min-width: 768px) {
+  .floating-cta {
+    display: none;
+  }
+}
+
+.floating-cta__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem 0.5rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.floating-cta__btn:active {
+  transform: scale(0.97);
+}
+
+/* WhatsApp — bottone primario */
+.floating-cta__btn--whatsapp {
+  background: linear-gradient(to bottom, var(--color-primary-container), var(--color-primary));
+  color: #ffffff;
+}
+
+/* Chiama — secondario */
+.floating-cta__btn--call {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid rgba(218, 193, 191, 0.5);
+}
+
+.floating-cta__icon {
+  font-size: 1rem;
+  line-height: 1;
+}

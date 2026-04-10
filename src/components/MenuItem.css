@@ -1,0 +1,47 @@
+/* MenuItem.css — Stile singola voce del menù */
+
+.menu-item {
+  padding: var(--space-xs) 0;
+}
+
+.menu-item + .menu-item {
+  border-top: none;
+  margin-top: 0;
+}
+
+.menu-item__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: 0.1rem;
+}
+
+/* Nome del piatto */
+.menu-item__name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--text-subtitle);
+  color: var(--color-on-surface);
+  line-height: 1.3;
+  flex: 1;
+}
+
+/* Prezzo in serif per enfasi */
+.menu-item__price {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-body);
+  color: var(--color-primary-container);
+  white-space: nowrap;
+}
+
+/* Descrizione ingredienti */
+.menu-item__desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+  font-style: italic;
+  font-weight: 300;
+}

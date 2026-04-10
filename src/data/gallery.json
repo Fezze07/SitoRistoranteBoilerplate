@@ -1,0 +1,12 @@
+{
+  "sectionLabel": "Atmosfera",
+  "title": "La nostra galleria",
+  "items": [
+    { "id": 1, "src": "/images/gallery-1.jpg", "alt": "Piatto tipico veneto" },
+    { "id": 2, "src": "/images/gallery-2.jpg", "alt": "Interno del ristorante" },
+    { "id": 3, "src": "/images/gallery-3.jpg", "alt": "Pasta fatta a mano" },
+    { "id": 4, "src": "/images/gallery-4.jpg", "alt": "Calice di vino rosso del Piave" },
+    { "id": 5, "src": "/images/gallery-5.jpg", "alt": "Dolce della casa" },
+    { "id": 6, "src": "/images/gallery-6.jpg", "alt": "Esterno di Portobuffolè" }
+  ]
+}

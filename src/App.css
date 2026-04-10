@@ -1,0 +1,292 @@
+/* ==========================================================
+   App.css — Design System Tokens & Global Styles
+   Hostaria ai Porteghi
+   Fonte: Stitch Design Project 9362968696261866088
+   ========================================================== */
+
+/* --- Reset & Box Model ----------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Design Tokens (CSS Variables) ----------------------- */
+:root {
+  /* Palette principale */
+  --color-primary:           #400408;   /* borgogna scuro */
+  --color-primary-container: #5d1a1a;   /* borgogna medio */
+  --color-primary-fixed:     #ffdad7;   /* rosa chiaro */
+  --color-primary-fixed-dim: #ffb3af;   /* rosa accent */
+
+  /* Superfici (warm ivory) */
+  --color-surface:                #fdf9f3;
+  --color-surface-low:            #f7f3ed;
+  --color-surface-container:      #f1ede7;
+  --color-surface-container-high: #ebe8e2;
+  --color-surface-highest:        #e6e2dc;
+  --color-surface-dim:            #dddad4;
+  --color-surface-bright:         #ffffff;
+
+  /* Testo */
+  --color-on-surface:         #1c1c18;
+  --color-on-surface-variant: #544241;
+  --color-outline-variant:    #dac1bf;
+
+  /* Secondario (verde salvia) */
+  --color-secondary:           #536252;
+  --color-secondary-container: #d4e4d0;
+  --color-on-secondary:        #ffffff;
+
+  /* Terziario (cuoio caldo) */
+  --color-tertiary:           #2e1700;
+  --color-tertiary-container: #492b08;
+  --color-on-tertiary:        #ffffff;
+
+  /* Error */
+  --color-error: #ba1a1a;
+
+  /* Tipografia */
+  --font-serif:  'Noto Serif', Georgia, serif;
+  --font-sans:   'Manrope', system-ui, sans-serif;
+
+  /* Dimensioni testo (molto più estreme per look editoriale) */
+  --text-display:  clamp(3.5rem, 9vw, 7rem);
+  --text-hero:     clamp(2rem, 5vw, 4rem);
+  --text-title:    clamp(1.75rem, 4vw, 3rem);
+  --text-subtitle: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-body:     1.05rem;
+  --text-sm:       0.85rem;
+  --text-xs:       0.7rem;
+
+  /* Spaziatura ritmica aumentata per far respirare il design */
+  --space-xs:   0.5rem;
+  --space-sm:   1.5rem;
+  --space-md:   2.5rem;
+  --space-lg:   4rem;
+  --space-xl:   7rem;
+  --space-2xl:  10rem;
+
+  /* Bordi arrotondati (md = 0.375rem, secondo design system) */
+  --radius-sm:  0.25rem;
+  --radius-md:  0.375rem;
+  --radius-lg:  0.75rem;
+  --radius-xl:  1.25rem;
+
+  /* Ombre ambientali (no nero puro) */
+  --shadow-ambient: 0 8px 40px rgba(28, 28, 24, 0.06);
+  --shadow-float:   0 16px 48px rgba(28, 28, 24, 0.10);
+
+  /* Transizioni */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+  /* Altezza navbar */
+  --navbar-height: 64px;
+
+  /* Padding laterale pagina */
+  --page-padding: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+/* --- Base HTML ------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Texture noise per un feel più raw e tattile */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+}
+
+@media (max-width: 767px) {
+  body {
+    /* spazio in fondo per la floating bar su mobile */
+    padding-bottom: 80px;
+  }
+}
+
+/* --- Tipografia globale ---------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--text-display); }
+h2 { font-size: var(--text-title); }
+h3 { font-size: var(--text-subtitle); }
+
+p {
+  line-height: 1.75;
+  color: var(--color-on-surface-variant);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Bottoni globali ------------------------------------- */
+
+/* CTA primario — gradiente vino rosso */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(to bottom, var(--color-primary-container), var(--color-primary));
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* CTA secondario — outline ghost */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.03em;
+  border: 1.5px solid rgba(218, 193, 191, 0.4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-base);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-low);
+  border-color: rgba(218, 193, 191, 0.7);
+  transform: translateY(-1px);
+}
+
+/* --- Utility classes ------------------------------------ */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.section-divider {
+  width: 2.5rem;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary-container), transparent);
+  margin: var(--space-sm) 0 var(--space-md);
+  border: none;
+}
+
+/* Max-width container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+}
+
+/* --- Immagini placeholder (mostrate se img mancante) ----- */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary-container) 0%, var(--color-primary) 50%, var(--color-tertiary-container) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.4);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Animazioni d'ingresso ------------------------------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* --- Scrollbar personalizzata (desktop) ------------------ */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-container);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary-container);
+    border-radius: 3px;
+  }
+}

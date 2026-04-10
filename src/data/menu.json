@@ -1,0 +1,87 @@
+{
+  "sectionLabel": "La nostra proposta",
+  "title": "Il Menù",
+  "subtitle": "Piatti della tradizione veneta, stagionali e preparati ogni giorno con ingredienti locali.",
+  "note": "* Il menù può variare in base alla stagione e alla disponibilità degli ingredienti. Siamo felici di soddisfare esigenze alimentari particolari — chiedici pure.",
+  "aria": {
+    "prevMenu": "Menu precedente",
+    "nextMenu": "Menu successivo"
+  },
+  "categories": [
+    {
+      "category": "Primi",
+      "items": [
+        {
+          "name": "Spaghetti allo scoglio",
+          "description": "Pasta lunga con fresco assortimento di mare",
+          "price": "14"
+        },
+        {
+          "name": "Spaghetto frutti di mare",
+          "description": "Un classico intramontabile ai sapori dell'Adriatico",
+          "price": "14"
+        },
+        {
+          "name": "Casarecce alle verdure",
+          "description": "Pasta corta saltata con verdure di stagione",
+          "price": "10"
+        },
+        {
+          "name": "Trofie gorgonzola e noci",
+          "description": "Crema saporita di formaggio erborinato e noci croccanti",
+          "price": "12"
+        }
+      ]
+    },
+    {
+      "category": "Secondi",
+      "items": [
+        {
+          "name": "Filetto di scorfano al forno",
+          "description": "Cottura delicata per esaltare il sapore del pesce",
+          "price": "16"
+        },
+        {
+          "name": "Sgombro al forno",
+          "description": "Gustoso pesce azzurro preparato secondo tradizione",
+          "price": "14"
+        },
+        {
+          "name": "Straccetti di pollo al balsamico",
+          "description": "Bocconcini di carne bianca sfumati con aceto balsamico",
+          "price": "13"
+        },
+        {
+          "name": "Braciola grigliata",
+          "description": "Classica braciola di carne scottata alla griglia",
+          "price": "12"
+        }
+      ]
+    },
+    {
+      "category": "Contorni",
+      "items": [
+        {
+          "name": "Patate al forno",
+          "description": "Patate a spicchi profumate al rosmarino",
+          "price": "5"
+        },
+        {
+          "name": "Patate fritte",
+          "description": "Classiche e croccanti",
+          "price": "4"
+        },
+        {
+          "name": "Tegoline",
+          "description": "Fagiolini verdi saltati in padella",
+          "price": "5"
+        },
+        {
+          "name": "Spinaci",
+          "description": "Spinaci freschi ripassati",
+          "price": "5"
+        }
+      ]
+    }
+  ]
+}

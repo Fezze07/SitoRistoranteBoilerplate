@@ -1,0 +1,136 @@
+/* Menu.css — Sezione Menù */
+
+.menu-section {
+  background: var(--color-surface);
+  padding: var(--space-xl) 0;
+}
+
+/* Header */
+.menu-section__header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto var(--space-md);
+}
+
+.menu-section__header .section-divider {
+  margin: var(--space-sm) auto var(--space-md);
+}
+
+.menu-section__title {
+  font-size: var(--text-title);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.menu-section__subtitle {
+  font-size: var(--text-body);
+  color: var(--color-on-surface-variant);
+  line-height: 1.7;
+}
+
+/* Wrapper esterno con frecce */
+.menu-carousel-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Maschera: clip dei contenuti, nessuno scroll */
+.menu-carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: var(--space-md) 0;
+}
+
+/* Track che si muove con transform */
+.menu-carousel__track {
+  display: flex;
+  /* Transizione principale del carosello */
+  transition: transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+/* Singola slide: 75% del container per mostrare il peek laterale */
+.menu-carousel__slide {
+  flex: 0 0 75%;
+  width: 75%;
+  padding: 0 var(--space-md);
+  box-sizing: border-box;
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.menu-carousel__slide--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Titolo categoria */
+.menu-carousel__category-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-subtitle);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-surface-variant);
+  padding-bottom: 4px;
+  display: block;
+  min-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Freccette di navigazione */
+.menu-carousel__btn {
+  background: transparent;
+  border: 1px solid var(--color-surface-variant);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+  margin: 0 var(--space-sm);
+}
+
+.menu-carousel__btn:hover {
+  background: var(--color-surface-variant);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Su mobile nascondiamo le frecce per favorire lo swipe */
+@media (max-width: 767px) {
+  .menu-carousel__btn {
+    display: none;
+  }
+}
+
+/* Lista piatti dentro la slide */
+.menu-section__list {
+  background: transparent;
+  animation: fadeUp 0.35s ease;
+  width: 100%;
+  padding: 0;
+}
+
+/* Nota finale */
+.menu-section__note {
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: var(--text-xs);
+  color: var(--color-outline-variant);
+  font-style: italic;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}

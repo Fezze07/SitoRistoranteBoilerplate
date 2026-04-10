@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>%VITE_SEO_TITLE%</title>
+    <meta name="description" content="%VITE_SEO_DESCRIPTION%" />
+    <meta name="keywords" content="%VITE_SEO_KEYWORDS%" />
+    <meta name="author" content="%VITE_SEO_AUTHOR%" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="%VITE_SEO_OG_TITLE%" />
+    <meta property="og:description" content="%VITE_SEO_OG_DESCRIPTION%" />
+    <meta property="og:type" content="restaurant" />
+
+    <!-- Sicurezza: modalità IE compatibilità disabilitata -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Sicurezza: referrer limitato per link esterni -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favico.ico" />
+
+    <!-- Google Fonts: Noto Serif (display) + Manrope (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons for nav -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

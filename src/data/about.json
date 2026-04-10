@@ -1,0 +1,21 @@
+{
+  "sectionLabel": "La nostra storia",
+  "title": {
+    "normal": "Una tradizione di sapori",
+    "italic": "scolpita nella pietra"
+  },
+  "paragraphs": [
+    "Sotto i rustici \"porteghi\", la nostra osteria si fa custode dell'autenticità di Portobuffolè, antica \"gaia dimora\" e gioiello medievale tra Porta Trevisana e Torre Civica, dove il tempo sembra rallentare.",
+    "Ispirandoci al Mercatino dell'Antiquariato e agli eventi storici del borgo, portiamo in tavola solo le radici del nostro territorio: taglieri a km 0, pesce fresco e cicchetti accompagnati dai migliori vini veneti.",
+    "Un punto d'incontro vivo per la comunità. Dalla cena ai nostri vivaci aperitivi con karaoke e serate musicali, vi aspettiamo sotto gli archi di Portobuffolè."
+  ],
+  "values": [
+    "Tradizione a Km Zero",
+    "Pesce Fresco",
+    "Vini del Territorio"
+  ],
+  "imageCard": {
+    "year": "2026",
+    "text": "La Nostra Cucina"
+  }
+}

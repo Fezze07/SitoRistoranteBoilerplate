@@ -1,0 +1,179 @@
+/* Hero.css — Sezione hero a tutto schermo */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Centrato invece che flex-end per evitare l'effetto "allungato" */
+  padding-top: var(--navbar-height);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Immagine di sfondo
+   Inserisci /public/images/hero.jpg per sostituire il gradiente */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  /* Fallback warme se l'immagine non è presente */
+  background-color: var(--color-primary);
+  /* Leggero zoom al caricamento */
+  animation: heroZoom 12s ease-out forwards;
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+/* Gradiente scuro per leggibilità del testo */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(24, 8, 4, 0.88) 0%,
+    rgba(24, 8, 4, 0.45) 45%,
+    rgba(24, 8, 4, 0.15) 100%
+  );
+}
+
+/* Contenuto hero */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+  animation: fadeUp 0.9s ease 0.2s both;
+  padding-left: 0; 
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    margin-left: 5vw;
+  }
+}
+
+/* Label sopra il titolo */
+.hero__label {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-primary-fixed-dim);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+  border-left: 2px solid var(--color-primary-fixed-dim);
+  padding-left: 1rem;
+}
+
+/* Titolo principale */
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 0.95;
+  margin-bottom: var(--space-lg);
+  text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+  letter-spacing: -0.02em;
+}
+
+/* Il corsivo del titolo */
+.hero__title em {
+  font-style: italic;
+  color: var(--color-primary-fixed);
+  font-weight: 400;
+}
+
+/* Tagline */
+.hero__tagline {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  max-width: 520px;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hide-mobile {
+    display: inline;
+  }
+}
+
+/* Azioni CTA */
+.hero__actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.hero__btn {
+  min-width: 200px;
+}
+
+/* Su mobile le CTA hero sono nascoste (c'è la floating bar) */
+@media (max-width: 767px) {
+  .hero__actions {
+    display: none;
+  }
+}
+
+/* Bottone outline su sfondo scuro */
+.hero__btn--outline {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.hero__btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  right: var(--page-padding);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 1s ease 1.2s both;
+}
+
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5));
+  animation: scrollPulse 2s ease infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+.hero__scroll-text {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  writing-mode: vertical-rl;
+}
