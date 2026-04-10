@@ -7,6 +7,7 @@ import Gallery from './sections/Gallery'
 import Info from './sections/Info'
 import Footer from './sections/Footer'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <FloatingCTA />
       
       <Analytics />
+      <SpeedInsights />
     </>
   )
 }
