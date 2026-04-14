@@ -9,6 +9,10 @@
     "La gaia dimora nel cuore medievale di Portobuffolè."
   ],
   "scrollText": "Scopri",
+  "menuHighlight": {
+    "text": "Cene aziendali, battesimi e occasioni speciali",
+    "price": "35/40 euro"
+  },
   "aria": {
     "section": "Benvenuto in Hostaria ai Porteghi",
     "bgImage": "Cucina tradizionale veneziana"

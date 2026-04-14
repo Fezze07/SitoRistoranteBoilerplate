@@ -17,6 +17,7 @@
 :root {
   /* Palette principale */
   --color-primary: #400408;
+  --color-primary-rgb: 64, 4, 8;
   /* borgogna scuro */
   --color-primary-container: #5d1a1a;
   /* borgogna medio */

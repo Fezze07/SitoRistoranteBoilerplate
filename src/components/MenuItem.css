@@ -4,7 +4,7 @@
   padding: var(--space-xs) 0;
 }
 
-.menu-item + .menu-item {
+.menu-item+.menu-item {
   border-top: none;
   margin-top: 0;
 }
@@ -27,8 +27,9 @@
   flex: 1;
 }
 
-/* Prezzo in serif per enfasi */
+/* Prezzo in serif per enfasi - Nascosto su richiesta cliente */
 .menu-item__price {
+  display: none;
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: var(--text-body);
@@ -50,15 +51,17 @@
   .menu-item {
     padding: 0.4rem 0;
   }
+
   .menu-item__name {
     font-size: 1.05rem;
   }
+
   .menu-item__price {
     font-size: 0.95rem;
   }
+
   .menu-item__desc {
     font-size: 0.8rem;
     line-height: 1.4;
   }
 }
-

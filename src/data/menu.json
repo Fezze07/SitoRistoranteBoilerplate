@@ -1,7 +1,7 @@
 {
   "sectionLabel": "La nostra proposta",
   "title": "Il Menù",
-  "subtitle": "Piatti tradizionali, stagionali e preparati ogni giorno con ingredienti locali.",
+  "subtitle": "Specialità di pesce freschissimo, pasta fatta in casa e sapori autentici dell'Adriatico, preparati con maestria seguendo la stagionalità.",
   "note": "* Il menù può variare in base alla stagione e alla disponibilità degli ingredienti. Siamo felici di soddisfare esigenze alimentari particolari — chiedici pure.",
   "aria": {
     "prevMenu": "Menu precedente",
@@ -9,27 +9,47 @@
   },
   "categories": [
     {
+      "category": "Antipasti",
+      "items": [
+        {
+          "name": "Polenta fritta alla curcuma fatta in casa con baccalà mantecato",
+          "description": "Un classico veneziano rivisitato con una polenta speziata e croccante.",
+          "price": "--"
+        },
+        {
+          "name": "Piatto con cappelunghe, canestrelli e capesanta",
+          "description": "Selezione di prelibatezze dell'Adriatico preparate alla perfezione.",
+          "price": "--"
+        },
+        {
+          "name": "Zuppa di polpo e patate con crostoni di pane",
+          "description": "Una zuppa calda e avvolgente con polpo tenerissimo e patate saporite.",
+          "price": "--"
+        }
+      ]
+    },
+    {
       "category": "Primi",
       "items": [
         {
-          "name": "Spaghetti allo scoglio",
-          "description": "Pasta lunga con fresco assortimento di mare",
-          "price": "14"
+          "name": "Gnocco fatto in casa al Granciporro",
+          "description": "Gnocchi freschi avvolti dal sapore intenso del granciporro locale.",
+          "price": "--"
         },
         {
-          "name": "Spaghetto frutti di mare",
-          "description": "Un classico intramontabile ai sapori dell'Adriatico",
-          "price": "14"
+          "name": "Scialatiello fatto in casa ai frutti di mare",
+          "description": "Pasta fresca della tradizione meridionale saltata con il meglio del mercato ittico.",
+          "price": "--"
         },
         {
-          "name": "Casarecce alle verdure",
-          "description": "Pasta corta saltata con verdure di stagione",
-          "price": "10"
+          "name": "Spaghettone di Gragnano trafilato al bronzo con vongole",
+          "description": "Eccellenza campana unita alle vongole veraci per un gusto inconfondibile.",
+          "price": "--"
         },
         {
-          "name": "Trofie gorgonzola e noci",
-          "description": "Crema saporita di formaggio erborinato e noci croccanti",
-          "price": "12"
+          "name": "Risotto ai frutti di mare",
+          "description": "Mantecatura perfetta per un risotto che profuma di mare e tradizione.",
+          "price": "--"
         }
       ]
     },
@@ -37,24 +57,19 @@
       "category": "Secondi",
       "items": [
         {
-          "name": "Filetto di scorfano al forno",
-          "description": "Cottura delicata per esaltare il sapore del pesce",
-          "price": "16"
+          "name": "Gran Fritto calamari e paranza con verdure fritte",
+          "description": "Croccantezza e freschezza in un fritto misto arricchito da verdure dell'orto.",
+          "price": "--"
         },
         {
-          "name": "Sgombro al forno",
-          "description": "Gustoso pesce azzurro preparato secondo tradizione",
-          "price": "14"
+          "name": "Calamaretti alla griglia",
+          "description": "La semplicità della brace per esaltare la delicatezza dei calamaretti freschi.",
+          "price": "--"
         },
         {
-          "name": "Straccetti di pollo al balsamico",
-          "description": "Bocconcini di carne bianca sfumati con aceto balsamico",
-          "price": "13"
-        },
-        {
-          "name": "Braciola grigliata",
-          "description": "Classica braciola di carne scottata alla griglia",
-          "price": "12"
+          "name": "Trancio di Tonno Sashimi rosso con papavero nero e mirtilli",
+          "description": "Un incontro audace tra la freschezza del tonno, la croccantezza dei semi e la nota dolce-acida dei mirtilli.",
+          "price": "--"
         }
       ]
     },
@@ -72,8 +87,8 @@
           "price": "4"
         },
         {
-          "name": "Tegoline",
-          "description": "Fagiolini verdi saltati in padella",
+          "name": "Crostini misti",
+          "description": "Completo di crostini con prosciutto tagliato al momento",
           "price": "5"
         },
         {

@@ -28,21 +28,26 @@ export default function Info() {
               </h3>
               <div className="info__hours">
                 {infoData.hours.map(row => (
-                  <div key={row.days} className={`info__hour-row ${row.lunch === infoData.labels.closed ? 'info__hour-row--closed' : ''}`}>
+                  <div key={row.days} className={`info__hour-row ${row.lunch === infoData.labels.closed && row.dinner === infoData.labels.closed ? 'info__hour-row--closed' : ''}`}>
                     <span className="info__hour-day">{row.days}</span>
                     <div className="info__hour-times">
-                      {row.lunch !== infoData.labels.closed ? (
+                      {row.lunch === infoData.labels.closed && row.dinner === infoData.labels.closed ? (
+                        <span className="info__hour-closed">{infoData.labels.closed}</span>
+                      ) : (
                         <>
-                          <span>{row.lunch}</span>
+                          <span>{row.lunch === infoData.labels.closed ? 'Pranzo chiuso' : row.lunch}</span>
                           <span className="info__hour-sep">·</span>
                           <span>{row.dinner}</span>
                         </>
-                      ) : (
-                        <span className="info__hour-closed">{infoData.labels.closed}</span>
                       )}
                     </div>
                   </div>
                 ))}
+                {infoData.specialNote && (
+                  <div className="info__special-note">
+                    <p>{infoData.specialNote}</p>
+                  </div>
+                )}
               </div>
             </div>
 

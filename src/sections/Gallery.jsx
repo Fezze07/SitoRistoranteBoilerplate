@@ -4,9 +4,6 @@ import './Gallery.css'
 import galleryData from '../data/gallery.json'
 import { CloseIcon, MaximizeIcon } from '../components/Icons'
 
-// Pattern di dimensioni per la griglia: [grande, piccolo, piccolo, piccolo, grande, piccolo]
-const SLOT_SIZES = ['large', 'small', 'small', 'small', 'large', 'small']
-
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
 
@@ -33,7 +30,7 @@ export default function Gallery() {
           {galleryData.items.map((item, i) => (
             <div
               key={item.id}
-              className={`gallery__item gallery__item--${SLOT_SIZES[i]}`}
+              className="gallery__item"
               onClick={() => setSelectedImage(item)}
               role="button"
               aria-label={`Ingrandisci immagine`}

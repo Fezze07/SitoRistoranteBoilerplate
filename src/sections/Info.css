@@ -117,6 +117,22 @@
   color: var(--color-outline-variant);
 }
 
+.info__special-note {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-surface-container-low);
+  border-left: 3px solid var(--color-primary-container);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-on-surface-variant);
+  font-style: italic;
+}
+
+.info__special-note p {
+  margin: 0;
+}
+
 /* Indirizzo */
 .info__address {
   font-style: normal;

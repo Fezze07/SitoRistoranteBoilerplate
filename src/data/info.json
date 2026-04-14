@@ -19,24 +19,20 @@
   },
   "hours": [
     {
-      "days": "Martedì — Venerdì",
-      "lunch": "12:00 – 14:30",
-      "dinner": "18:00 – 22:30"
+      "days": "Mercoledì — Domenica",
+      "lunch": "10:00 – 14:30",
+      "dinner": "17:30 – 22:30"
     },
     {
-      "days": "Sabato",
-      "lunch": "12:00 – 14:30",
-      "dinner": "18:00 – 22:30"
-    },
-    {
-      "days": "Domenica",
-      "lunch": "12:00 – 15:00",
-      "dinner": "Chiuso"
+      "days": "Martedì",
+      "lunch": "Chiuso",
+      "dinner": "17:30 – 22:30"
     },
     {
       "days": "Lunedì",
       "lunch": "Chiuso",
       "dinner": "Chiuso"
     }
-  ]
+  ],
+  "specialNote": "Seconda domenica del mese in occasione del mercatino dalle 7:30 del mattino."
 }

@@ -117,8 +117,7 @@
 
 /* Su mobile la card sovrapposta ha meno overlap */
 @media (max-width: 899px) {
-  .about__card {
-    left: 1rem;
-    bottom: 1rem;
+  .about {
+    padding: var(--space-xl) 0;
   }
 }

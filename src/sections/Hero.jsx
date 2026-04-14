@@ -48,6 +48,7 @@ export default function Hero() {
       <div className="hero__content container">
         <span className="hero__label">{heroData.contextLabel}</span>
 
+
         <h1 className="hero__title">
           {heroData.title.normal}<br />
           <em>{heroData.title.italic}</em>
@@ -57,6 +58,13 @@ export default function Hero() {
           {heroData.tagline[0]}<br className="hide-mobile" />
           {heroData.tagline[1]}
         </p>
+
+        {heroData.menuHighlight && (
+          <div className="hero__highlight">
+            <span className="hero__highlight-text">{heroData.menuHighlight.text}</span>
+            <span className="hero__highlight-price">{heroData.menuHighlight.price}</span>
+          </div>
+        )}
 
         {/* Su mobile questi bottoni sono nascosti: usa la FloatingCTA */}
         <div className="hero__actions">
