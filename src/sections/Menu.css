@@ -123,6 +123,21 @@
   padding: 0;
 }
 
+/* Griglia per categorie lunghe (es. Pizze) per bilanciare l'altezza */
+.menu-section__list--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 var(--space-xl);
+  row-gap: 0;
+}
+
+@media (max-width: 991px) {
+  .menu-section__list--grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 /* Nota finale */
 .menu-section__note {
   text-align: center;

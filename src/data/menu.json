@@ -97,6 +97,71 @@
           "price": "5"
         }
       ]
+    },
+    {
+      "category": "Le Pizze",
+      "items": [
+        {
+          "name": "Margherita",
+          "description": "Pomodoro, mozzarella, basilico",
+          "price": "--"
+        },
+        {
+          "name": "Salamino",
+          "description": "Pomodoro, mozzarella, salamino piccante",
+          "price": "--"
+        },
+        {
+          "name": "Prosciutto",
+          "description": "Pomodoro, mozzarella, prosciutto cotto",
+          "price": "--"
+        },
+        {
+          "name": "Prosciutto e Funghi",
+          "description": "Pomodoro, mozzarella, prosciutto cotto, funghi",
+          "price": "--"
+        },
+        {
+          "name": "Tonno e Cipolla Rossa",
+          "description": "Pomodoro, mozzarella, tonno, cipolla rossa",
+          "price": "--"
+        },
+        {
+          "name": "Elenoire",
+          "description": "Pomodoro, mozzarella, wurstel, patatine",
+          "price": "--"
+        },
+        {
+          "name": "Salsiccia e Patate",
+          "description": "Pomodoro, mozzarella, salsiccia, patate al forno",
+          "price": "--"
+        },
+        {
+          "name": "Orietta",
+          "description": "Pomodoro, mozzarella, quattro formaggi",
+          "price": "--"
+        },
+        {
+          "name": "Contadina",
+          "description": "Pomodoro, mozzarella, verdure miste",
+          "price": "--"
+        },
+        {
+          "name": "Capricciosa",
+          "description": "Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive",
+          "price": "--"
+        },
+        {
+          "name": "Principessa",
+          "description": "Bianca, rucola, pomodorini, grana",
+          "price": "--"
+        },
+        {
+          "name": "Ai Porteghi",
+          "description": "Pomodoro, mozzarella, frutti di mare",
+          "price": "--"
+        }
+      ]
     }
   ]
 }

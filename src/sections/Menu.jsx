@@ -177,7 +177,7 @@ export default function Menu() {
                     <p className="menu-carousel__special-desc">{cat.description}</p>
                   )}
                   
-                  <div className="menu-section__list">
+                  <div className={`menu-section__list ${cat.items.length > 6 ? 'menu-section__list--grid' : ''}`}>
                     {cat.items.map(item => (
                       <MenuItem
                         key={item.name}
