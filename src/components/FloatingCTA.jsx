@@ -5,6 +5,7 @@ import { WHATSAPP_URL, PHONE_LINK } from '../constants'
 import { PhoneIcon, MessageIcon, ArrowDownIcon } from './Icons'
 import globalData from '../data/global.json'
 import specialMenuData from '../data/specialEventMenu.json'
+import { isSpecialMenuVisible } from '../utils/dateUtils'
 
 export default function FloatingCTA() {
   return (
@@ -31,7 +32,7 @@ export default function FloatingCTA() {
         {globalData.labels.callBtn}
       </a>
 
-      {specialMenuData && specialMenuData.active && (
+      {isSpecialMenuVisible(specialMenuData) && (
         <a
           href="#menu-speciale"
           className="floating-cta__btn floating-cta__btn--special"

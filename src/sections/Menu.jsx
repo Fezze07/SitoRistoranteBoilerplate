@@ -3,6 +3,7 @@ import { useRef, useState, useEffect, useCallback, useMemo } from 'react'
 import MenuItem from '../components/MenuItem'
 import menuData from '../data/menu.json'
 import specialMenuData from '../data/specialEventMenu.json'
+import { isSpecialMenuVisible } from '../utils/dateUtils'
 import { ChevronLeftIcon, ChevronRightIcon } from '../components/Icons'
 import './Menu.css'
 
@@ -20,7 +21,7 @@ export default function Menu() {
   // Costruisce l'array delle categorie dinamicamente
   const categoriesToRender = useMemo(() => {
     const list = []
-    if (specialMenuData && specialMenuData.active) {
+    if (isSpecialMenuVisible(specialMenuData)) {
       list.push({
         category: specialMenuData.eventName,
         isSpecial: true,

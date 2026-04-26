@@ -5,6 +5,7 @@ import './Navbar.css'
 import { WHATSAPP_URL, PHONE_LINK } from '../constants'
 import globalData from '../data/global.json'
 import specialMenuData from '../data/specialEventMenu.json'
+import { isSpecialMenuVisible } from '../utils/dateUtils'
 import { PhoneIcon, MessageIcon, ArrowDownIcon, ArrowRightIcon } from './Icons'
 
 export default function Navbar() {
@@ -39,7 +40,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {specialMenuData && specialMenuData.active && (
+          {isSpecialMenuVisible(specialMenuData) && (
             <a href="#menu-speciale" className="navbar__special-badge">
               <span className="navbar__special-badge-dot" />
               <span className="navbar__special-badge-text">
@@ -76,7 +77,7 @@ export default function Navbar() {
           </a>
         ))}
 
-        {specialMenuData && specialMenuData.active && (
+        {isSpecialMenuVisible(specialMenuData) && (
           <a href="#menu-speciale" className="navbar__drawer-link navbar__drawer-link--special" onClick={closeDrawer}>
             <span className="navbar__special-badge-dot" />
             {specialMenuData.heroCTA}
