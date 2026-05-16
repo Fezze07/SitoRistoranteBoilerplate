@@ -3,13 +3,10 @@ import { useRef, useState, useEffect, useCallback, useMemo } from 'react'
 import MenuItem from '../components/MenuItem'
 import menuData from '../data/menu.json'
 import specialMenuData from '../data/specialEventMenu.json'
-import { isSpecialMenuVisible } from '../utils/dateUtils'
+import { isSpecialMenuVisible, getVisibleSpecialMenus } from '../utils/dateUtils'
 import { ChevronLeftIcon, ChevronRightIcon } from '../components/Icons'
 import './Menu.css'
 
-// Ogni slide occupa il 75% del container; il peek laterale è 12.5% per lato
-const SLIDE_PCT = 75
-const PEEK_PCT = (100 - SLIDE_PCT) / 2   // 12.5
 
 export default function Menu() {
   const trackRef = useRef(null)
@@ -21,16 +18,19 @@ export default function Menu() {
   // Costruisce l'array delle categorie dinamicamente
   const categoriesToRender = useMemo(() => {
     const list = []
-    if (isSpecialMenuVisible(specialMenuData)) {
+    const visibleSpecials = getVisibleSpecialMenus(specialMenuData)
+    
+    visibleSpecials.forEach((specialMenu) => {
       list.push({
-        category: specialMenuData.eventName,
+        category: specialMenu.eventName,
         isSpecial: true,
-        description: specialMenuData.description,
-        fixedPrice: specialMenuData.fixedPrice,
-        showPrice: specialMenuData.showPrice,
-        items: specialMenuData.items
+        description: specialMenu.description,
+        fixedPrice: specialMenu.fixedPrice,
+        showPrice: specialMenu.showPrice,
+        items: specialMenu.items
       })
-    }
+    })
+
     list.push(...menuData.categories)
     return list
   }, [specialMenuData, menuData])
@@ -46,7 +46,7 @@ export default function Menu() {
   const [currentIdx, setCurrentIdx] = useState(1)
 
   const getTranslate = useCallback((idx) =>
-    `translateX(calc(${PEEK_PCT - idx * SLIDE_PCT}%))`, [])
+    `translateX(calc(var(--peek-width) - ${idx} * var(--slide-width)))`, [])
 
   // Salta istantaneamente all'indice reale corrispondente dopo aver raggiunto un clone,
   // disabilitando la transizione per evitare il jitter visivo
@@ -171,30 +171,32 @@ export default function Menu() {
                 <div
                   key={`${cat.category}-${idx}`}
                   id={cat.isSpecial && isSlideActive(idx) ? 'menu-speciale' : undefined}
-                  className={`menu-carousel__slide ${isSlideActive(idx) ? 'menu-carousel__slide--active' : ''} ${cat.isSpecial ? 'menu-carousel__slide--special' : ''}`}
+                  className={`menu-carousel__slide ${isSlideActive(idx) ? 'menu-carousel__slide--active' : ''}`}
                 >
-                  <h3 className="menu-carousel__category-title">{cat.category}</h3>
-                  {cat.isSpecial && (
-                    <p className="menu-carousel__special-desc">{cat.description}</p>
-                  )}
-                  
-                  <div className={`menu-section__list ${cat.items.length > 6 ? 'menu-section__list--grid' : ''}`}>
-                    {cat.items.map(item => (
-                      <MenuItem
-                        key={item.name}
-                        name={item.name}
-                        description={item.description}
-                        price={(cat.isSpecial && cat.showPrice === false) ? null : item.price}
-                      />
-                    ))}
-                  </div>
-
-                  {cat.isSpecial && cat.fixedPrice && cat.showPrice !== false && (
-                    <div className="menu-carousel__fixed-price">
-                       <span className="price-label">Tutto compreso a</span>
-                       <span className="price-value">{cat.fixedPrice}</span>
+                  <div className={`menu-carousel__slide-inner ${cat.isSpecial ? 'menu-carousel__slide--special' : ''}`}>
+                    <h3 className="menu-carousel__category-title">{cat.category}</h3>
+                    {cat.isSpecial && (
+                      <p className="menu-carousel__special-desc">{cat.description}</p>
+                    )}
+                    
+                    <div className={`menu-section__list ${cat.items.length > 6 ? 'menu-section__list--grid' : ''}`}>
+                      {cat.items.map(item => (
+                        <MenuItem
+                          key={item.name}
+                          name={item.name}
+                          description={item.description}
+                          price={(cat.isSpecial && cat.showPrice === false) ? null : item.price}
+                        />
+                      ))}
                     </div>
-                  )}
+
+                    {cat.isSpecial && cat.fixedPrice && cat.showPrice !== false && (
+                      <div className="menu-carousel__fixed-price">
+                         <span className="price-label">Tutto compreso a</span>
+                         <span className="price-value">{cat.fixedPrice}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

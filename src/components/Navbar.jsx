@@ -5,12 +5,15 @@ import './Navbar.css'
 import { WHATSAPP_URL, PHONE_LINK } from '../constants'
 import globalData from '../data/global.json'
 import specialMenuData from '../data/specialEventMenu.json'
-import { isSpecialMenuVisible } from '../utils/dateUtils'
+import { getVisibleSpecialMenus } from '../utils/dateUtils'
 import { PhoneIcon, MessageIcon, ArrowDownIcon, ArrowRightIcon } from './Icons'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
+  
+  const visibleSpecials = getVisibleSpecialMenus(specialMenuData)
+  const firstSpecial = visibleSpecials[0]
 
   // Aggiunge la classe CSS "scrolled" dopo 20px di scroll (attiva lo sfondo glassmorphism)
   useEffect(() => {
@@ -40,11 +43,11 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {isSpecialMenuVisible(specialMenuData) && (
+          {firstSpecial && (
             <a href="#menu-speciale" className="navbar__special-badge">
               <span className="navbar__special-badge-dot" />
               <span className="navbar__special-badge-text">
-                {specialMenuData.heroCTA}
+                {firstSpecial.heroCTA}
               </span>
               <ArrowDownIcon size={16} className="navbar__special-badge-icon" />
             </a>
@@ -77,10 +80,10 @@ export default function Navbar() {
           </a>
         ))}
 
-        {isSpecialMenuVisible(specialMenuData) && (
+        {firstSpecial && (
           <a href="#menu-speciale" className="navbar__drawer-link navbar__drawer-link--special" onClick={closeDrawer}>
             <span className="navbar__special-badge-dot" />
-            {specialMenuData.heroCTA}
+            {firstSpecial.heroCTA}
             <ArrowDownIcon size={18} />
           </a>
         )}

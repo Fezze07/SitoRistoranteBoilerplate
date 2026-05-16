@@ -1,4 +1,3 @@
-// FloatingCTA.jsx — Barra flottante prenotazione (solo mobile)
 import './FloatingCTA.css'
 
 import { WHATSAPP_URL, PHONE_LINK } from '../constants'
@@ -8,6 +7,8 @@ import specialMenuData from '../data/specialEventMenu.json'
 import { isSpecialMenuVisible } from '../utils/dateUtils'
 
 export default function FloatingCTA() {
+  const hasSpecialMenu = isSpecialMenuVisible(specialMenuData);
+
   return (
     <div className="floating-cta" role="complementary" aria-label={globalData.aria.floatingCta}>
       <a
@@ -32,7 +33,7 @@ export default function FloatingCTA() {
         {globalData.labels.callBtn}
       </a>
 
-      {isSpecialMenuVisible(specialMenuData) && (
+      {hasSpecialMenu && (
         <a
           href="#menu-speciale"
           className="floating-cta__btn floating-cta__btn--special"

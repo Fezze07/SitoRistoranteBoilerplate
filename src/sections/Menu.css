@@ -42,6 +42,27 @@
   overflow: hidden;
   width: 100%;
   padding: var(--space-md) 0;
+  /* Variabili per dimensionare le slide e il peek laterale in modo responsive */
+  --slide-width: 80%;
+  --peek-width: 12.5%;
+}
+
+@media (max-width: 767px) {
+  .menu-carousel {
+    /* Su mobile aumentiamo la larghezza della slide per evitare che il contenuto sia troppo schiacciato */
+    --slide-width: 90%;
+    --peek-width: 7%;
+  }
+
+  .menu-carousel__slide {
+    /* Riduciamo il padding laterale della slide su mobile */
+    padding: 0 var(--space-md);
+  }
+
+  .menu-carousel__slide--special {
+    /* Riduciamo anche il padding interno del menu speciale */
+    padding: var(--space-lg) var(--space-md);
+  }
 }
 
 /* Track che si muove con transform */
@@ -52,11 +73,12 @@
   will-change: transform;
 }
 
-/* Singola slide: 75% del container per mostrare il peek laterale */
+/* Singola slide: usa la variabile per mostrare il peek laterale */
 .menu-carousel__slide {
-  flex: 0 0 75%;
-  width: 75%;
-  padding: 0 var(--space-md);
+  flex: 0 0 var(--slide-width);
+  width: var(--slide-width);
+  padding: 0 var(--space-lg);
+  /* Aumentato da space-md per distanziare i menu */
   box-sizing: border-box;
   opacity: 0.4;
   pointer-events: none;
@@ -67,6 +89,13 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+.menu-carousel__slide-inner {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 
 /* Titolo categoria */
 .menu-carousel__category-title {
@@ -156,9 +185,11 @@
     font-size: 1.25rem;
     margin-bottom: var(--space-md);
   }
+
   .menu-section__title {
     font-size: 2rem;
   }
+
   .menu-section {
     padding: var(--space-lg) 0;
   }
@@ -201,6 +232,8 @@
   font-style: italic;
   margin-bottom: var(--space-xl);
   display: block;
+  white-space: pre-line;
+  /* Supporta \n nei file JSON */
 }
 
 .menu-carousel__fixed-price {

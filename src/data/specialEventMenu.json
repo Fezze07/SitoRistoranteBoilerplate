@@ -1,25 +1,84 @@
-{
-  "expiryDate": "2026-04-24T23:59:59",
-  "heroCTA": "Nuovo menù speciale ",
-  "eventName": "Venerdì 24 Aprile - Sera",
-  "fixedPrice": "35 euro",
-  "showPrice": false,
-  "description": "Menu degustazione a prezzo fisso",
-  "items": [
-    {
-      "name": "Antipasto",
-      "description": "Uovo all'occhio di bue con asparagi, crudo di Parma e salsa olandese",
-      "price": ""
-    },
-    {
-      "name": "Primo",
-      "description": "Risotto asparagi e capesante 3 consistenze (crema, bollito e fritto)",
-      "price": ""
-    },
-    {
-      "name": "Bevande incluse",
-      "description": "Bibite, acqua e caffè compresi nel prezzo",
-      "price": ""
-    }
-  ]
-}
+[
+  {
+    "expiryDate": "",
+    "hasExpiry": false,
+    "heroCTA": "Nuovo menù speciale ",
+    "eventName": "Cene / Pranzi Aziendali - Carne",
+    "fixedPrice": "35 euro",
+    "showPrice": false,
+    "description": "Menu degustazione a prezzo fisso (Variante Carne)",
+    "items": [
+      {
+        "name": "Antipasto",
+        "description": "Affettato dei Porteghi accompagnato da pizza di patate",
+        "price": ""
+      },
+      {
+        "name": "Bis di Primi (Portata Unica)",
+        "description": "Scialatiello alla Norma (melanzane fritte, mozzarella e ricotta) \n Lasagnetta Rustica (funghi, carciofi e speck)",
+        "price": ""
+      },
+      {
+        "name": "Secondi",
+        "description": "Polpette al sugo e puntine di maiale",
+        "price": ""
+      },
+      {
+        "name": "Contorni",
+        "description": "Patate al forno e insalata mista",
+        "price": ""
+      },
+      {
+        "name": "Dolce",
+        "description": "Salame al cioccolato (fatto in casa)",
+        "price": ""
+      },
+      {
+        "name": "Nota finale",
+        "description": "Acqua, vino, caffè tutto incluso",
+        "price": ""
+      }
+    ]
+  },
+  {
+    "expiryDate": "",
+    "hasExpiry": false,
+    "heroCTA": "Nuovo menù speciale ",
+    "eventName": "Cene / Pranzi Aziendali - Pesce",
+    "fixedPrice": "35 euro",
+    "showPrice": false,
+    "description": "Menu degustazione a prezzo fisso (Variante Pesce)",
+    "items": [
+      {
+        "name": "Antipasto Misto Porteghi",
+        "description": "Insalata di seppia \n Zuppa polpo e patate \n Sardine Pastellate \n Polenta e baccalà \n Capelunghe e canestrelli)",
+        "price": ""
+      },
+      {
+        "name": "Bis di Primi (Portata Unica)",
+        "description": "Scialatiello ai frutti di mare & Risotto ai gamberi su crema di zucchine e grattugiata di limone",
+        "price": ""
+      },
+      {
+        "name": "Secondi",
+        "description": "Grigliata mista di pesce e gran fritto",
+        "price": ""
+      },
+      {
+        "name": "Contorni",
+        "description": "Patate al forno e insalata mista",
+        "price": ""
+      },
+      {
+        "name": "Dolce",
+        "description": "Salame al cioccolato (fatto in casa)",
+        "price": ""
+      },
+      {
+        "name": "Nota finale",
+        "description": "Acqua, vino, caffè tutto incluso",
+        "price": ""
+      }
+    ]
+  }
+]
