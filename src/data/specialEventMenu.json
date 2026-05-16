@@ -4,8 +4,8 @@
     "hasExpiry": false,
     "heroCTA": "Nuovo menù speciale ",
     "eventName": "Cene / Pranzi Aziendali - Carne",
-    "fixedPrice": "35 euro",
-    "showPrice": false,
+    "fixedPrice": "45 euro",
+    "showPrice": true,
     "description": "Menu degustazione a prezzo fisso (Variante Carne)",
     "items": [
       {
@@ -45,8 +45,8 @@
     "hasExpiry": false,
     "heroCTA": "Nuovo menù speciale ",
     "eventName": "Cene / Pranzi Aziendali - Pesce",
-    "fixedPrice": "35 euro",
-    "showPrice": false,
+    "fixedPrice": "50 euro",
+    "showPrice": true,
     "description": "Menu degustazione a prezzo fisso (Variante Pesce)",
     "items": [
       {
